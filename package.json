@@ -4,8 +4,21 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage --testTimeout=210000 -- tests/",
     "start": "nodemon server.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules",
+      "/tests"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)/"
+    ],
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   },
   "repository": {
     "type": "git",
