@@ -12,7 +12,7 @@ let sequelize = new Sequelize({
   username: env.MYSQL_USER,
   password: env.MYSQL_PASSWORD,
   database: env.MYSQL_DATABASE,
-  host: "localhost",
+  host: env.MYSQL_HOST,
   dialect: "mysql"
 })
 
