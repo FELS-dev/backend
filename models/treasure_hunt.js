@@ -1,5 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const TreasureHunt = sequelize.define('TreasureHunt', {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
+        },
         question: DataTypes.STRING
     }, {
         timestamps: false,

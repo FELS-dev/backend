@@ -1,5 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const DigitalPasses = sequelize.define('DigitalPasses', {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
+        },
         qr_code: DataTypes.STRING
     }, {
         timestamps: false,

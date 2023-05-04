@@ -1,5 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const UserTreasureHuntProgress = sequelize.define('UserTreasureHuntProgress', {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
+        },
         is_completed: DataTypes.BOOLEAN
     }, {
         timestamps: false,

@@ -1,5 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const CvSubmissions = sequelize.define('CvSubmissions', {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
+        },
         cv_file: DataTypes.STRING,
         submitted_at: DataTypes.DATE
     }, {
