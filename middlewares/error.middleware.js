@@ -4,7 +4,7 @@ const errorLog = require("simple-node-logger").createSimpleLogger({
   timestampFormat: "YYYY-MM-DD HH:mm:ss"
 })
 
-module.exports = (error, _, res) => {
+module.exports = (error, _, res,next) => {
   errorLog.error(error.message)
   return res.status(process.env.EXCEPTION_CODE).send(methods.failResponse(error.message))
 }
