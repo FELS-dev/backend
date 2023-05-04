@@ -16,6 +16,16 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'stands'
     });
 
+    Stands.associate = models => {
+        Stands.hasMany(models.TreasureHunt, {
+            as: 'treasure_hunt',
+            foreignKey: {
+                name: 'stand_id',
+                allowNull: false
+            }
+        });
+    };
+
     return Stands;
 };
 

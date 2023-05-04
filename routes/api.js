@@ -19,5 +19,7 @@ router.post("/digital-passes", validate(indexValidator), DigitalPassController.c
 
 router.get("/stands", StandController.index);
 router.post("/stand", validate(indexValidator), StandController.create);
+router.get('/stand/:id', StandController.getStandById);
+
 
 module.exports = router
