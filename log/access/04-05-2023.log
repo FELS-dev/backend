@@ -1,0 +1,5 @@
+2023-05-04 14:50:37 INFO  {"reqObject":{"method":"GET","path":"/","param":{},"body":{}},"resObject":{"statusCode":200}} 
+2023-05-04 14:50:37 INFO  {"reqObject":{"method":"GET","path":"/favicon.ico","param":{},"body":{}},"resObject":{"statusCode":200}} 
+2023-05-04 14:50:47 INFO  {"reqObject":{"method":"GET","path":"/stands","param":{},"body":{}},"resObject":{"statusCode":200}} 
+2023-05-04 14:53:12 INFO  {"reqObject":{"method":"GET","path":"/stands","param":{},"body":{}},"resObject":{"statusCode":200}} 
+2023-05-04 14:53:12 INFO  {"reqObject":{"method":"GET","path":"/favicon.ico","param":{},"body":{}},"resObject":{"statusCode":200}} 
