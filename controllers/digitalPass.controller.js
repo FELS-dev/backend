@@ -19,3 +19,13 @@ exports.create = async (req, res) => {
         res.status(500).send(failResponse("Error creating digital pass", { error }));
     }
 };
+
+exports.getDigitalPassesByVisitor = async (req, res) => {
+    try {
+        const visitorId = req.params.visitor_id;
+        const digitalPasses = await DigitalPasses.findAll({ where: { visitor_id: visitorId } });
+        res.send(successResponse('Digital passes retrieved', { digitalPasses }));
+    } catch (error) {
+        res.status(500).send(failResponse('Error retrieving digital passes', { error }));
+    }
+};
