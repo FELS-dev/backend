@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         timestamps: false,
         tableName: 'stands'
-    });
+    })
 
     Stands.associate = models => {
         Stands.hasMany(models.TreasureHunt, {
@@ -23,9 +23,9 @@ module.exports = (sequelize, DataTypes) => {
                 name: 'stand_id',
                 allowNull: false
             }
-        });
-    };
+        })
+    }
 
-    return Stands;
-};
+    return Stands
+}
 

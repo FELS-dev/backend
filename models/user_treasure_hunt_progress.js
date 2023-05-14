@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
         tableName: 'user_treasure_hunt_progress',
         primaryKey: 'progress_id'
-    });
+    })
 
     UserTreasureHuntProgress.associate = models => {
         UserTreasureHuntProgress.belongsTo(models.Visitor, {
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: true
             }
         });
-    };
+    }
 
-    return UserTreasureHuntProgress;
-};
+    return UserTreasureHuntProgress
+}

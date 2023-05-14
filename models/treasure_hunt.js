@@ -19,16 +19,16 @@ module.exports = (sequelize, DataTypes) => {
                 name: 'stand_id',
                 allowNull: false
             }
-        });
+        })
         TreasureHunt.hasMany(models.TreasureHuntChoices, {
             as: 'choices',
             foreignKey: {
                 name: 'hunt_id',
                 allowNull: false
             }
-        });
-    };
+        })
+    }
 
 
-    return TreasureHunt;
-};
+    return TreasureHunt
+}

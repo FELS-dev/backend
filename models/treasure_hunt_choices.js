@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         timestamps: false,
         tableName: 'treasure_hunt_choices'
-    });
+    })
 
     TreasureHuntChoices.associate = models => {
         TreasureHuntChoices.belongsTo(models.TreasureHunt, {
@@ -22,5 +22,5 @@ module.exports = (sequelize, DataTypes) => {
         });
     };
 
-    return TreasureHuntChoices;
-};
+    return TreasureHuntChoices
+}
