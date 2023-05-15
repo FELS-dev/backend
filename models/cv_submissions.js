@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         timestamps: false,
         tableName: 'cv_submissions'
-    });
+    })
 
     CvSubmissions.associate = models => {
         CvSubmissions.belongsTo(models.Visitor, {
@@ -19,14 +19,14 @@ module.exports = (sequelize, DataTypes) => {
                 name: 'visitor_id',
                 allowNull: false
             }
-        });
+        })
         CvSubmissions.belongsTo(models.Stands, {
             foreignKey: {
                 name: 'stand_id',
                 allowNull: false
             }
-        });
-    };
+        })
+    }
 
-    return CvSubmissions;
-};
+    return CvSubmissions
+}

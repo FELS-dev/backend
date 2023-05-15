@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         timestamps: false,
         tableName: 'digital_passes'
-    });
+    })
 
     DigitalPasses.associate = models => {
         DigitalPasses.belongsTo(models.Visitor, {
@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
                 name: 'visitor_id',
                 allowNull: false
             }
-        });
-    };
+        })
+    }
 
-    return DigitalPasses;
-};
+    return DigitalPasses
+}

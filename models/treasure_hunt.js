@@ -14,12 +14,21 @@ module.exports = (sequelize, DataTypes) => {
 
     TreasureHunt.associate = models => {
         TreasureHunt.belongsTo(models.Stands, {
+            as: 'stand',
             foreignKey: {
                 name: 'stand_id',
                 allowNull: false
             }
-        });
-    };
+        })
+        TreasureHunt.hasMany(models.TreasureHuntChoices, {
+            as: 'choices',
+            foreignKey: {
+                name: 'hunt_id',
+                allowNull: false
+            }
+        })
+    }
 
-    return TreasureHunt;
-};
+
+    return TreasureHunt
+}

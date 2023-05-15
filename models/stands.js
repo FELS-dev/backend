@@ -14,8 +14,18 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         timestamps: false,
         tableName: 'stands'
-    });
+    })
 
-    return Stands;
-};
+    Stands.associate = models => {
+        Stands.hasMany(models.TreasureHunt, {
+            as: 'treasure_hunt',
+            foreignKey: {
+                name: 'stand_id',
+                allowNull: false
+            }
+        })
+    }
+
+    return Stands
+}
 
